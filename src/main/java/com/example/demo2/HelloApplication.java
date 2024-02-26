@@ -11,7 +11,7 @@ import jakarta.ws.rs.core.Application;
 @OpenAPIDefinition(info =
 @Info(
         title = "API de la SDBM",
-        version = "1.0",
+        version = "3.0.0",
         description = "SDBM API",
         contact = @Contact(url = "http://www.afpa.fr/", name = "SDBM", email = "contact@afpa.fr")
 )
