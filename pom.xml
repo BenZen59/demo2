@@ -76,7 +76,6 @@
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-jaxrs2-servlet-initializer-v2-jakarta</artifactId>
             <version>2.2.20</version>
-
         </dependency>
     </dependencies>
 

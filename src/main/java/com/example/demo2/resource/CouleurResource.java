@@ -1,6 +1,11 @@
 package com.example.demo2.resource;
 
 import com.example.demo2.dao.DAOFactory;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
@@ -11,11 +16,15 @@ import java.util.List;
 
 
 // Ce service est accessible à l'url  "/couleurs"
+@OpenAPIDefinition(info = @Info(title = "Couleurs", version = "3.0.0"))
 @Path("couleurs")
 @Produces(MediaType.APPLICATION_JSON)
 public class CouleurResource {
-
-
+    @Operation(summary = "Récupérer une couleur")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Couleurs récupéré avec succès"),
+            @ApiResponse(responseCode = "404", description = "Couleurs non trouvé")
+    })
     // Méthode appellée lors d'une requête HTTP GET
     @GET
     public Response getAll() {
