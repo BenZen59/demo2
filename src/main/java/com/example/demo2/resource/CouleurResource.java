@@ -16,8 +16,8 @@ import java.util.List;
 
 
 // Ce service est accessible à l'url  "/couleurs"
-@OpenAPIDefinition(info = @Info(title = "Couleurs", version = "3.0.0"))
 @Path("couleurs")
+@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class CouleurResource {
     @Operation(summary = "Récupérer une couleur")
